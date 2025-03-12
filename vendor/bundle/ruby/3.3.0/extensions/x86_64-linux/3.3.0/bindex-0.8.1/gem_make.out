@@ -1,0 +1,18 @@
+current directory: /home/anes/inventory_management2/vendor/bundle/ruby/3.3.0/gems/bindex-0.8.1/ext/skiptrace
+/home/anes/.local/share/mise/installs/ruby/3.3.6/bin/ruby extconf.rb
+creating Makefile
+
+current directory: /home/anes/inventory_management2/vendor/bundle/ruby/3.3.0/gems/bindex-0.8.1/ext/skiptrace
+make DESTDIR\= sitearchdir\=./.gem.20250312-55416-fbpeze sitelibdir\=./.gem.20250312-55416-fbpeze clean
+
+current directory: /home/anes/inventory_management2/vendor/bundle/ruby/3.3.0/gems/bindex-0.8.1/ext/skiptrace
+make DESTDIR\= sitearchdir\=./.gem.20250312-55416-fbpeze sitelibdir\=./.gem.20250312-55416-fbpeze
+compiling cruby.c
+linking shared-object skiptrace/internal/cruby.so
+
+current directory: /home/anes/inventory_management2/vendor/bundle/ruby/3.3.0/gems/bindex-0.8.1/ext/skiptrace
+make DESTDIR\= sitearchdir\=./.gem.20250312-55416-fbpeze sitelibdir\=./.gem.20250312-55416-fbpeze install
+/usr/bin/install -c -m 0755 cruby.so ./.gem.20250312-55416-fbpeze/skiptrace/internal
+
+current directory: /home/anes/inventory_management2/vendor/bundle/ruby/3.3.0/gems/bindex-0.8.1/ext/skiptrace
+make DESTDIR\= sitearchdir\=./.gem.20250312-55416-fbpeze sitelibdir\=./.gem.20250312-55416-fbpeze clean

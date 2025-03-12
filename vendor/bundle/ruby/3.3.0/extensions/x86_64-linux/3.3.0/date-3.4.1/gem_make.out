@@ -1,0 +1,24 @@
+current directory: /home/anes/inventory_management2/vendor/bundle/ruby/3.3.0/gems/date-3.4.1/ext/date
+/home/anes/.local/share/mise/installs/ruby/3.3.6/bin/ruby extconf.rb
+checking for rb_category_warn()... yes
+checking for timezone in time.h with  -Werror... yes
+checking for altzone in time.h with  -Werror... no
+creating Makefile
+
+current directory: /home/anes/inventory_management2/vendor/bundle/ruby/3.3.0/gems/date-3.4.1/ext/date
+make DESTDIR\= sitearchdir\=./.gem.20250312-55416-3j8f7t sitelibdir\=./.gem.20250312-55416-3j8f7t clean
+
+current directory: /home/anes/inventory_management2/vendor/bundle/ruby/3.3.0/gems/date-3.4.1/ext/date
+make DESTDIR\= sitearchdir\=./.gem.20250312-55416-3j8f7t sitelibdir\=./.gem.20250312-55416-3j8f7t
+compiling date_core.c
+compiling date_parse.c
+compiling date_strftime.c
+compiling date_strptime.c
+linking shared-object date_core.so
+
+current directory: /home/anes/inventory_management2/vendor/bundle/ruby/3.3.0/gems/date-3.4.1/ext/date
+make DESTDIR\= sitearchdir\=./.gem.20250312-55416-3j8f7t sitelibdir\=./.gem.20250312-55416-3j8f7t install
+/usr/bin/install -c -m 0755 date_core.so ./.gem.20250312-55416-3j8f7t
+
+current directory: /home/anes/inventory_management2/vendor/bundle/ruby/3.3.0/gems/date-3.4.1/ext/date
+make DESTDIR\= sitearchdir\=./.gem.20250312-55416-3j8f7t sitelibdir\=./.gem.20250312-55416-3j8f7t clean

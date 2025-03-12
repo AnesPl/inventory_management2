@@ -1,0 +1,19 @@
+current directory: /home/anes/inventory_management2/vendor/bundle/ruby/3.3.0/gems/debug-1.10.0/ext/debug
+/home/anes/.local/share/mise/installs/ruby/3.3.6/bin/ruby extconf.rb
+creating Makefile
+
+current directory: /home/anes/inventory_management2/vendor/bundle/ruby/3.3.0/gems/debug-1.10.0/ext/debug
+make DESTDIR\= sitearchdir\=./.gem.20250312-55416-aq24aa sitelibdir\=./.gem.20250312-55416-aq24aa clean
+
+current directory: /home/anes/inventory_management2/vendor/bundle/ruby/3.3.0/gems/debug-1.10.0/ext/debug
+make DESTDIR\= sitearchdir\=./.gem.20250312-55416-aq24aa sitelibdir\=./.gem.20250312-55416-aq24aa
+compiling debug.c
+compiling iseq_collector.c
+linking shared-object debug/debug.so
+
+current directory: /home/anes/inventory_management2/vendor/bundle/ruby/3.3.0/gems/debug-1.10.0/ext/debug
+make DESTDIR\= sitearchdir\=./.gem.20250312-55416-aq24aa sitelibdir\=./.gem.20250312-55416-aq24aa install
+/usr/bin/install -c -m 0755 debug.so ./.gem.20250312-55416-aq24aa/debug
+
+current directory: /home/anes/inventory_management2/vendor/bundle/ruby/3.3.0/gems/debug-1.10.0/ext/debug
+make DESTDIR\= sitearchdir\=./.gem.20250312-55416-aq24aa sitelibdir\=./.gem.20250312-55416-aq24aa clean

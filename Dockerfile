@@ -76,4 +76,4 @@ ENTRYPOINT ["./bin/rails", "server", "-b", "0.0.0.0"]
 
 # Start server via Thruster by default, this can be overwritten at runtime
 EXPOSE 80
-CMD ["./bin/thrust", "./bin/rails", "server"]
+CMD ["./bin/rails", "server"]

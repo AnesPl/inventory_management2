@@ -45,19 +45,17 @@ RUN bundle install && \
 # Copy application code
 COPY . .
 
-# Precompile bootsnap code for faster boot times
-RUN bundle exec bootsnap precompile app/ lib/
-
 # List contents of ./bin to check for rails
 RUN ls -l ./bin
 
 # Make rails executable
-RUN chmod +x ./bin/rails
+RUN chmod -R +x ./bin
 
 # Precompiling assets for production without requiring secret RAILS_MASTER_KEY
 RUN SECRET_KEY_BASE_DUMMY=1 ./bin/rails assets:precompile
 
-
+# Precompile bootsnap code for faster boot times
+RUN bundle exec bootsnap precompile app/ lib/
 
 
 # Final stage for app image
@@ -74,7 +72,7 @@ RUN groupadd --system --gid 1000 rails && \
 USER 1000:1000
 
 # Entrypoint prepares the database.
-ENTRYPOINT ["/rails/bin/docker-entrypoint"]
+ENTRYPOINT ["./bin/rails"]
 
 # Start server via Thruster by default, this can be overwritten at runtime
 EXPOSE 80

@@ -74,6 +74,5 @@ USER 1000:1000
 # Entrypoint prepares the database.
 ENTRYPOINT ["./bin/rails", "server", "-b", "0.0.0.0"]
 
-# Start server via Thruster by default, this can be overwritten at runtime
-EXPOSE 80
-CMD ["./bin/rails", "server"]
+# Expose port 3000 for the Rails server
+EXPOSE 3000

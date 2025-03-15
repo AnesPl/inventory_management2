@@ -1,14 +1,22 @@
 Rails.application.routes.draw do
-  # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
+  root "dashboard#index" # Landing page
 
-  # Reveal health status on /up that returns 200 if the app boots with no exceptions, otherwise 500.
-  # Can be used by load balancers and uptime monitors to verify that the app is live.
-  get "up" => "rails/health#show", as: :rails_health_check
+  # User authentication (Devise or custom)
+  devise_for :users
 
-  # Render dynamic PWA files from app/views/pwa/* (remember to link manifest in application.html.erb)
-  # get "manifest" => "rails/pwa#manifest", as: :pwa_manifest
-  # get "service-worker" => "rails/pwa#service_worker", as: :pwa_service_worker
+  # User dashboard - only accessible to logged-in users
+  get "/dashboard", to: "dashboard#show"
 
-  # Defines the root path route ("/")
-  root "posts#index"
+  # Product & category management (only for logged-in users)
+  resources :categories do
+    resources :products, only: [:index, :new, :create] # Nested so products belong to categories
+  end
+  resources :products, except: [:index, :new, :create] # Manage individual products
+
+  # Admin panel
+  namespace :admin do
+    resources :users, only: [:index, :show, :destroy] # Admin can see and delete users
+    resources :categories, only: [:index, :destroy] # Admin can delete categories
+    resources :products, only: [:index, :destroy] # Admin can delete products
+  end
 end

@@ -1,40 +1,46 @@
-<h1>Edit Product</h1>
+<h1 class="text-3xl font-bold text-gray-800 mb-6">Edit Product</h1>
 
-<%= form_with model: @product, local: true do |form| %>
-  <% if @product.errors.any? %>
-    <div>
-      <h2><%= pluralize(@product.errors.count, "error") %> prohibited this product from being saved:</h2>
-      <ul>
-        <% @product.errors.full_messages.each do |message| %>
-          <li><%= message %></li>
-        <% end %>
-      </ul>
-    </div>
-  <% end %>
+<div class="bg-white shadow-lg rounded-lg p-6">
+  <%= form_with model: @product, local: true do |form| %>
+    
+    <% if @product.errors.any? %>
+      <div class="bg-red-100 text-red-700 p-4 rounded-md mb-4">
+        <h2 class="font-semibold">The following errors prohibited this product from being saved:</h2>
+        <ul>
+          <% @product.errors.full_messages.each do |message| %>
+            <li><%= message %></li>
+          <% end %>
+        </ul>
+      </div>
+    <% end %>
 
-  <div>
-    <%= form.label :name %>
-    <%= form.text_field :name %>
+    <div class="space-y-4">
+      <div class="space-y-2">
+        <%= form.label :name, class: 'block text-sm font-medium text-gray-700' %>
+        <%= form.text_field :name, class: 'mt-1 block w-full p-3 border border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500' %>
+      </div>
+
+      <div class="space-y-2">
+        <%= form.label :price, class: 'block text-sm font-medium text-gray-700' %>
+        <%= form.number_field :price, class: 'mt-1 block w-full p-3 border border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500' %>
+      </div>
+
+      <div class="space-y-2">
+        <%= form.label :stock, class: 'block text-sm font-medium text-gray-700' %>
+        <%= form.number_field :stock, class: 'mt-1 block w-full p-3 border border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500' %>
+      </div>
+
+      <div class="space-y-2">
+        <%= form.label :category_id, class: 'block text-sm font-medium text-gray-700' %>
+        <%= form.collection_select :category_id, Category.all, :id, :name, { prompt: 'Select a Category' }, class: 'mt-1 block w-full p-3 border border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500' %>
+      </div>
+
+      <div>
+        <%= form.submit 'Update Product', class: 'w-full py-3 px-4 bg-blue-500 text-white rounded-md hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-indigo-500' %>
+      </div>
+
+    <% end %>
   </div>
 
-  <div>
-    <%= form.label :price %>
-    <%= form.number_field :price %>
-  </div>
-
-  <div>
-    <%= form.label :stock %>
-    <%= form.number_field :stock %>
-  </div>
-
-  <div>
-    <%= form.label :category_id %>
-    <%= form.collection_select :category_id, Category.all, :id, :name %>
-  </div>
-
-  <div>
-    <%= form.submit %>
-  </div>
-<% end %>
-
-<%= link_to 'Back', product_path(@product) %>
+  <%= link_to 'Back', products_path, class: 'mt-4 inline-block text-blue-500 hover:text-blue-600' %>
+</div>

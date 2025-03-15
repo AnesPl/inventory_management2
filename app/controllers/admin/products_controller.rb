@@ -1,6 +1,6 @@
 module Admin
     class ProductsController < ApplicationController
-      before_action :authenticate_admin
+        before_action :require_login
   
       def index
         @products = Product.all
@@ -48,9 +48,10 @@ module Admin
         params.require(:product).permit(:name, :price, :stock, :category_id)
       end
   
-      def authenticate_admin
-        # Add admin authentication logic here
-      end
+      def require_login
+        unless session[:user_id]
+          redirect_to login_path, notice: 'Please log in first.'
+        end
     end
   end
   

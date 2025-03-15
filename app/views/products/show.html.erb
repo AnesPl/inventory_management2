@@ -1,0 +1,29 @@
+<h1 class="text-3xl font-bold text-gray-800 mb-4"><%= @product.name %></h1>
+
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-8 mb-8">
+  <div class="text-lg text-gray-600">
+    <p><strong class="font-semibold">Price:</strong> <%= number_to_currency(@product.price) %></p>
+    <p><strong class="font-semibold">Stock:</strong> <%= @product.stock %></p>
+    <p><strong class="font-semibold">Category:</strong> <%= @product.category.name if @product.category %></p>
+  </div>
+
+  <div>
+    <h2 class="text-2xl font-semibold mb-4">Stock Transactions</h2>
+    <ul class="space-y-2">
+      <% @product.stock_transactions.each do |transaction| %>
+        <li class="border border-gray-200 rounded-lg p-4">
+          <p class="text-sm text-gray-500"><strong>Note:</strong> <%= transaction.note %></p>
+          <p class="text-sm text-gray-500"><strong>Transaction Type:</strong> <%= transaction.transaction_type %></p>
+          <p class="text-sm text-gray-500"><strong>Quantity:</strong> <%= transaction.quantity %></p>
+          <p class="text-sm text-gray-500"><strong>Date:</strong> <%= transaction.created_at.strftime('%B %d, %Y') %></p>
+        </li>
+      <% end %>
+    </ul>
+  </div>
+</div>
+
+<div class="mt-6 flex space-x-4">
+  <%= link_to 'Edit', edit_product_path(@product), class: 'px-4 py-2 bg-blue-500 text-white rounded-md hover:bg-blue-600' %>
+  <%= link_to 'Back to Products', products_path, class: 'px-4 py-2 bg-gray-300 text-gray-800 rounded-md hover:bg-gray-400' %>
+  <%= link_to 'New Stock Transaction', new_product_stock_transaction_path(@product), class: 'px-4 py-2 bg-green-500 text-white rounded-md hover:bg-green-600' %>
+</div>

@@ -1,0 +1,26 @@
+<h1><%= @product.name %></h1>
+<p>Current stock: <%= @product.total_stock %></p>
+
+<%= link_to 'New Stock Transaction', new_product_stock_transaction_path(@product) %>
+
+<h2>Stock Transactions</h2>
+<table>
+  <thead>
+    <tr>
+      <th>Transaction Type</th>
+      <th>Quantity</th>
+      <th>Note</th>
+      <th>Created At</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @product.stock_transactions.each do |transaction| %>
+      <tr>
+        <td><%= transaction.transaction_type %></td>
+        <td><%= transaction.quantity %></td>
+        <td><%= transaction.note %></td>
+        <td><%= transaction.created_at.strftime("%b %d, %Y %I:%M %p") %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>

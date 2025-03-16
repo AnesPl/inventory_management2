@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  # Users Routes
+  # Users Routes (Registration)
   get "users/new", to: "users#new", as: 'signup'  # Render the signup form
   post "users", to: "users#create"  # Handle user creation (registration)
 

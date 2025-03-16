@@ -1,17 +1,18 @@
 class UsersController < ApplicationController
+  skip_before_action :require_login, only: [:new, :create]  # Allow login and sign-up
+
   def new
     @user = User.new
   end
 
   def create
-    user = User.find_by(email: params[:email])
-
-    if user && user.authenticate(params[:password])
-      session[:user_id] = user.id  # Store user ID in session
-      flash[:notice] = "Logged in successfully."
+    @user = User.new(user_params)
+    if @user.save
+      session[:user_id] = @user.id
+      flash[:notice] = "Account created successfully!"
       redirect_to dashboard_path
     else
-      flash[:alert] = "Invalid email or password."
+      flash[:error] = "There was a problem creating the account."
       render :new
     end
   end

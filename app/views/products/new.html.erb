@@ -31,9 +31,10 @@
       </div>
 
       <div class="space-y-2">
-        <%= form.label :category_id, class: 'block text-sm font-medium text-gray-700' %>
-        <%= form.collection_select :category_id, Category.all, :id, :name, { prompt: 'Select a Category' }, class: 'mt-1 block w-full p-3 border border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500' %>
-      </div>
+      <%= form.label :category_id, class: 'block text-sm font-medium text-gray-700' %>
+      <%= form.collection_select :category_id, current_user.categories, :id, :name, { prompt: 'Select a Category' }, class: 'mt-1 block w-full p-3 border border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500' %>
+    </div>
+    
 
       <div>
         <%= form.submit 'Create Product', class: 'w-full py-3 px-4 bg-blue-500 text-white rounded-md hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-indigo-500' %>

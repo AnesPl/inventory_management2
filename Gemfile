@@ -64,3 +64,5 @@ end
 gem "tailwindcss-rails", "~> 4.2"
 
 gem 'bcrypt', '~> 3.1.7'
+
+gem 'rails-ujs'

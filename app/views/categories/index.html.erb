@@ -1,4 +1,5 @@
 <h1 class="text-3xl font-bold text-gray-800 mb-6">Categories</h1>
+
 <%= link_to 'New Category', new_category_path, class: 'px-4 py-2 bg-blue-500 text-white rounded-md hover:bg-blue-600 mb-4 inline-block' %>
 
 <div class="bg-white shadow-lg rounded-lg p-6">
@@ -15,13 +16,10 @@
           <td class="px-6 py-3"><%= category.name %></td>
           <td class="px-6 py-3">
             <%= link_to 'Show', category_path(category), class: 'text-blue-500 hover:text-blue-700' %> |
-            
-            <% if current_user.admin? || category.user == current_user %>
-              <%= link_to 'Edit', edit_category_path(category), class: 'text-blue-500 hover:text-blue-700' %> |
-              <%= link_to 'Delete', category_path(category), method: :delete, data: { confirm: 'Are you sure?' }, class: 'text-red-500 hover:text-red-700' %>
-            <% end %>
-          </td>
-        </tr>
+            <%= link_to 'Edit', edit_category_path(category), class: 'text-blue-500 hover:text-blue-700' %> |
+            <%= button_to 'Delete', category_path(category), method: :delete, data: { confirm: 'Are you sure?' }, class: 'text-red-500 hover:text-red-700 bg-transparent border-0 cursor-pointer' %>
+            </td>
+        </tr> 
       <% end %>
     </tbody>
   </table>

@@ -3,16 +3,16 @@ current directory: /home/anes/inventory_management2/vendor/bundle/ruby/3.3.0/gem
 creating Makefile
 
 current directory: /home/anes/inventory_management2/vendor/bundle/ruby/3.3.0/gems/stringio-3.1.5/ext/stringio
-make DESTDIR\= sitearchdir\=./.gem.20250312-55416-wy32ut sitelibdir\=./.gem.20250312-55416-wy32ut clean
+make DESTDIR\= sitearchdir\=./.gem.20250318-497983-9oqhtz sitelibdir\=./.gem.20250318-497983-9oqhtz clean
 
 current directory: /home/anes/inventory_management2/vendor/bundle/ruby/3.3.0/gems/stringio-3.1.5/ext/stringio
-make DESTDIR\= sitearchdir\=./.gem.20250312-55416-wy32ut sitelibdir\=./.gem.20250312-55416-wy32ut
+make DESTDIR\= sitearchdir\=./.gem.20250318-497983-9oqhtz sitelibdir\=./.gem.20250318-497983-9oqhtz
 compiling stringio.c
 linking shared-object stringio.so
 
 current directory: /home/anes/inventory_management2/vendor/bundle/ruby/3.3.0/gems/stringio-3.1.5/ext/stringio
-make DESTDIR\= sitearchdir\=./.gem.20250312-55416-wy32ut sitelibdir\=./.gem.20250312-55416-wy32ut install
-/usr/bin/install -c -m 0755 stringio.so ./.gem.20250312-55416-wy32ut
+make DESTDIR\= sitearchdir\=./.gem.20250318-497983-9oqhtz sitelibdir\=./.gem.20250318-497983-9oqhtz install
+/usr/bin/install -c -m 0755 stringio.so ./.gem.20250318-497983-9oqhtz
 
 current directory: /home/anes/inventory_management2/vendor/bundle/ruby/3.3.0/gems/stringio-3.1.5/ext/stringio
-make DESTDIR\= sitearchdir\=./.gem.20250312-55416-wy32ut sitelibdir\=./.gem.20250312-55416-wy32ut clean
+make DESTDIR\= sitearchdir\=./.gem.20250318-497983-9oqhtz sitelibdir\=./.gem.20250318-497983-9oqhtz clean

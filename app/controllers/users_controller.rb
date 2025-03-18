@@ -1,6 +1,11 @@
 class UsersController < ApplicationController
   skip_before_action :require_login, only: [:new, :create]
 
+  def index
+    if current_user.admin?
+      @users = User.all  # Admin sees all products
+  end
+end
   def new
     @user = User.new
   end

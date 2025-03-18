@@ -1,2 +1,38 @@
-<h1 class="text-3xl font-bold text-gray-800 mb-6">Dashboard</h1>
-<p>Welcome to your dashboard! Here you can manage your inventory, view statistics, and more.</p>
+<div class="bg-gray-100 min-h-screen p-6">
+    <div class="max-w-6xl mx-auto bg-white shadow-lg rounded-lg p-8">
+        <h1 class="text-4xl font-bold text-gray-800 mb-4">Welcome to Your Inventory Dashboard</h1>
+        <p class="text-gray-600 text-lg mb-6">
+            Manage your inventory efficiently, track stock levels, and keep everything organized in one place.
+        </p>
+
+        <% if current_user.admin? %>
+            <!-- Admin Panel -->
+            <div class="mt-8">
+                <h2 class="text-2xl font-bold text-red-600">Admin Panel</h2>
+                <ul class="list-disc pl-5">
+                    <li><%= link_to "Manage Categories", categories_path, class: "text-blue-500 hover:underline" %></li>
+                    <li><%= link_to "Manage Products", products_path, class: "text-blue-500 hover:underline" %></li>
+                    <li><%= link_to "View All Users", users_path, class: "text-blue-500 hover:underline" %></li>
+                </ul>
+            </div>
+        <% else %>
+            <!-- Normal User Dashboard -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <a href="/products" class="p-6 bg-blue-500 text-white rounded-lg shadow-md hover:bg-blue-600">
+                    <h2 class="text-xl font-semibold">Manage Products</h2>
+                    <p class="text-sm">Add, edit, or remove products from your inventory.</p>
+                </a>
+
+                <a href="/categories" class="p-6 bg-green-500 text-white rounded-lg shadow-md hover:bg-green-600">
+                    <h2 class="text-xl font-semibold">Manage Categories</h2>
+                    <p class="text-sm">Organize your inventory by category for easy tracking.</p>
+                </a>
+
+                <a href="/reports" class="p-6 bg-yellow-500 text-white rounded-lg shadow-md hover:bg-yellow-600">
+                    <h2 class="text-xl font-semibold">View Reports</h2>
+                    <p class="text-sm">Analyze stock levels and sales trends.</p>
+                </a>
+            </div>
+        <% end %>
+    </div>
+</div>

@@ -7,16 +7,16 @@ checking for whether -std=c99 is accepted as CFLAGS... yes
 creating Makefile
 
 current directory: /home/anes/inventory_management2/vendor/bundle/ruby/3.3.0/gems/bootsnap-1.18.4/ext/bootsnap
-make DESTDIR\= sitearchdir\=./.gem.20250312-55416-ucgthf sitelibdir\=./.gem.20250312-55416-ucgthf clean
+make DESTDIR\= sitearchdir\=./.gem.20250318-497983-wfsrr7 sitelibdir\=./.gem.20250318-497983-wfsrr7 clean
 
 current directory: /home/anes/inventory_management2/vendor/bundle/ruby/3.3.0/gems/bootsnap-1.18.4/ext/bootsnap
-make DESTDIR\= sitearchdir\=./.gem.20250312-55416-ucgthf sitelibdir\=./.gem.20250312-55416-ucgthf
+make DESTDIR\= sitearchdir\=./.gem.20250318-497983-wfsrr7 sitelibdir\=./.gem.20250318-497983-wfsrr7
 compiling bootsnap.c
 linking shared-object bootsnap/bootsnap.so
 
 current directory: /home/anes/inventory_management2/vendor/bundle/ruby/3.3.0/gems/bootsnap-1.18.4/ext/bootsnap
-make DESTDIR\= sitearchdir\=./.gem.20250312-55416-ucgthf sitelibdir\=./.gem.20250312-55416-ucgthf install
-/usr/bin/install -c -m 0755 bootsnap.so ./.gem.20250312-55416-ucgthf/bootsnap
+make DESTDIR\= sitearchdir\=./.gem.20250318-497983-wfsrr7 sitelibdir\=./.gem.20250318-497983-wfsrr7 install
+/usr/bin/install -c -m 0755 bootsnap.so ./.gem.20250318-497983-wfsrr7/bootsnap
 
 current directory: /home/anes/inventory_management2/vendor/bundle/ruby/3.3.0/gems/bootsnap-1.18.4/ext/bootsnap
-make DESTDIR\= sitearchdir\=./.gem.20250312-55416-ucgthf sitelibdir\=./.gem.20250312-55416-ucgthf clean
+make DESTDIR\= sitearchdir\=./.gem.20250318-497983-wfsrr7 sitelibdir\=./.gem.20250318-497983-wfsrr7 clean

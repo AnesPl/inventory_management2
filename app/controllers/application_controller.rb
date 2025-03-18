@@ -15,4 +15,11 @@ class ApplicationController < ActionController::Base
       redirect_to login_path  # Redirect to login page if not authenticated
     end
   end
+
+  def require_admin
+    unless current_user&.admin?
+      flash[:alert] = "You are not authorized to access this page."
+      redirect_to root_path
+    end
+  end
 end

@@ -7,4 +7,8 @@ class User < ApplicationRecord
    # Associations
    has_many :products, dependent: :destroy
    has_many :categories, dependent: :destroy
+
+   def admin?
+    self.email == "anes.igrice@gmail.com"  # Replace with your email
+  end
 end

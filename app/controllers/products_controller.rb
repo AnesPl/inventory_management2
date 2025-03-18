@@ -3,7 +3,11 @@ class ProductsController < ApplicationController
   before_action :set_product, only: [:show, :edit, :update, :destroy]
 
   def index
-    @products = current_user.products  # Show only products owned by the current user
+    if current_user.admin?
+      @products = Product.all  # Admin sees all products
+    else
+      @products = current_user.products  # Regular users see only their own
+    end
   end
 
   def show

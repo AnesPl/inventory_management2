@@ -16,16 +16,16 @@ checking for ttyname_r()... yes
 creating Makefile
 
 current directory: /home/anes/inventory_management2/vendor/bundle/ruby/3.3.0/gems/io-console-0.8.0/ext/io/console
-make DESTDIR\= sitearchdir\=./.gem.20250312-55416-8gue51 sitelibdir\=./.gem.20250312-55416-8gue51 clean
+make DESTDIR\= sitearchdir\=./.gem.20250318-497983-hawvau sitelibdir\=./.gem.20250318-497983-hawvau clean
 
 current directory: /home/anes/inventory_management2/vendor/bundle/ruby/3.3.0/gems/io-console-0.8.0/ext/io/console
-make DESTDIR\= sitearchdir\=./.gem.20250312-55416-8gue51 sitelibdir\=./.gem.20250312-55416-8gue51
+make DESTDIR\= sitearchdir\=./.gem.20250318-497983-hawvau sitelibdir\=./.gem.20250318-497983-hawvau
 compiling console.c
 linking shared-object io/console.so
 
 current directory: /home/anes/inventory_management2/vendor/bundle/ruby/3.3.0/gems/io-console-0.8.0/ext/io/console
-make DESTDIR\= sitearchdir\=./.gem.20250312-55416-8gue51 sitelibdir\=./.gem.20250312-55416-8gue51 install
-/usr/bin/install -c -m 0755 console.so ./.gem.20250312-55416-8gue51/io
+make DESTDIR\= sitearchdir\=./.gem.20250318-497983-hawvau sitelibdir\=./.gem.20250318-497983-hawvau install
+/usr/bin/install -c -m 0755 console.so ./.gem.20250318-497983-hawvau/io
 
 current directory: /home/anes/inventory_management2/vendor/bundle/ruby/3.3.0/gems/io-console-0.8.0/ext/io/console
-make DESTDIR\= sitearchdir\=./.gem.20250312-55416-8gue51 sitelibdir\=./.gem.20250312-55416-8gue51 clean
+make DESTDIR\= sitearchdir\=./.gem.20250318-497983-hawvau sitelibdir\=./.gem.20250318-497983-hawvau clean

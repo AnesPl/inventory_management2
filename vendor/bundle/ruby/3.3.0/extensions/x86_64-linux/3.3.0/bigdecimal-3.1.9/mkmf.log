@@ -135,7 +135,7 @@ checked program was:
 have_func: checking for _lzcnt_u32() in x86intrin.h... -------------------- no
 
 LD_LIBRARY_PATH=.:/home/anes/.local/share/mise/installs/ruby/3.3.6/lib "gcc -o conftest -I/home/anes/.local/share/mise/installs/ruby/3.3.6/include/ruby-3.3.0/x86_64-linux -I/home/anes/.local/share/mise/installs/ruby/3.3.6/include/ruby-3.3.0/ruby/backward -I/home/anes/.local/share/mise/installs/ruby/3.3.6/include/ruby-3.3.0 -I.    -O3 -fno-fast-math -ggdb3 -Wall -Wextra -Wdeprecated-declarations -Wdiv-by-zero -Wduplicated-cond -Wimplicit-function-declaration -Wimplicit-int -Wpointer-arith -Wwrite-strings -Wold-style-definition -Wimplicit-fallthrough=0 -Wmissing-noreturn -Wno-cast-function-type -Wno-constant-logical-operand -Wno-long-long -Wno-missing-field-initializers -Wno-overlength-strings -Wno-packed-bitfield-compat -Wno-parentheses-equality -Wno-self-assign -Wno-tautological-compare -Wno-unused-parameter -Wno-unused-value -Wsuggest-attribute=format -Wsuggest-attribute=noreturn -Wunused-variable -Wmisleading-indentation -Wundef  -fPIC conftest.c  -L. -L/home/anes/.local/share/mise/installs/ruby/3.3.6/lib -Wl,-rpath,/home/anes/.local/share/mise/installs/ruby/3.3.6/lib -L. -fstack-protector-strong -rdynamic -Wl,-export-dynamic -Wl,--no-as-needed     -Wl,-rpath,/home/anes/.local/share/mise/installs/ruby/3.3.6/lib -L/home/anes/.local/share/mise/installs/ruby/3.3.6/lib -lruby  -lm -lpthread  -lc"
-/usr/bin/ld: /tmp/ccCIRLwN.o: in function `t':
+/usr/bin/ld: /tmp/cceyMVxY.o: in function `t':
 /home/anes/inventory_management2/vendor/bundle/ruby/3.3.0/gems/bigdecimal-3.1.9/ext/bigdecimal/conftest.c:16:(.text+0x7): undefined reference to `_lzcnt_u32'
 collect2: error: ld returned 1 exit status
 checked program was:
@@ -197,7 +197,7 @@ checked program was:
 have_func: checking for _lzcnt_u64() in x86intrin.h... -------------------- no
 
 LD_LIBRARY_PATH=.:/home/anes/.local/share/mise/installs/ruby/3.3.6/lib "gcc -o conftest -I/home/anes/.local/share/mise/installs/ruby/3.3.6/include/ruby-3.3.0/x86_64-linux -I/home/anes/.local/share/mise/installs/ruby/3.3.6/include/ruby-3.3.0/ruby/backward -I/home/anes/.local/share/mise/installs/ruby/3.3.6/include/ruby-3.3.0 -I.    -O3 -fno-fast-math -ggdb3 -Wall -Wextra -Wdeprecated-declarations -Wdiv-by-zero -Wduplicated-cond -Wimplicit-function-declaration -Wimplicit-int -Wpointer-arith -Wwrite-strings -Wold-style-definition -Wimplicit-fallthrough=0 -Wmissing-noreturn -Wno-cast-function-type -Wno-constant-logical-operand -Wno-long-long -Wno-missing-field-initializers -Wno-overlength-strings -Wno-packed-bitfield-compat -Wno-parentheses-equality -Wno-self-assign -Wno-tautological-compare -Wno-unused-parameter -Wno-unused-value -Wsuggest-attribute=format -Wsuggest-attribute=noreturn -Wunused-variable -Wmisleading-indentation -Wundef  -fPIC conftest.c  -L. -L/home/anes/.local/share/mise/installs/ruby/3.3.6/lib -Wl,-rpath,/home/anes/.local/share/mise/installs/ruby/3.3.6/lib -L. -fstack-protector-strong -rdynamic -Wl,-export-dynamic -Wl,--no-as-needed     -Wl,-rpath,/home/anes/.local/share/mise/installs/ruby/3.3.6/lib -L/home/anes/.local/share/mise/installs/ruby/3.3.6/lib -lruby  -lm -lpthread  -lc"
-/usr/bin/ld: /tmp/ccTdh71m.o: in function `t':
+/usr/bin/ld: /tmp/ccUArbWj.o: in function `t':
 /home/anes/inventory_management2/vendor/bundle/ruby/3.3.0/gems/bigdecimal-3.1.9/ext/bigdecimal/conftest.c:16:(.text+0x7): undefined reference to `_lzcnt_u64'
 collect2: error: ld returned 1 exit status
 checked program was:
@@ -381,7 +381,7 @@ checked program was:
 /* end */
 
 LD_LIBRARY_PATH=.:/home/anes/.local/share/mise/installs/ruby/3.3.6/lib "gcc -o conftest -I/home/anes/.local/share/mise/installs/ruby/3.3.6/include/ruby-3.3.0/x86_64-linux -I/home/anes/.local/share/mise/installs/ruby/3.3.6/include/ruby-3.3.0/ruby/backward -I/home/anes/.local/share/mise/installs/ruby/3.3.6/include/ruby-3.3.0 -I.    -O3 -fno-fast-math -ggdb3 -Wall -Wextra -Wdeprecated-declarations -Wdiv-by-zero -Wduplicated-cond -Wimplicit-function-declaration -Wimplicit-int -Wpointer-arith -Wwrite-strings -Wold-style-definition -Wimplicit-fallthrough=0 -Wmissing-noreturn -Wno-cast-function-type -Wno-constant-logical-operand -Wno-long-long -Wno-missing-field-initializers -Wno-overlength-strings -Wno-packed-bitfield-compat -Wno-parentheses-equality -Wno-self-assign -Wno-tautological-compare -Wno-unused-parameter -Wno-unused-value -Wsuggest-attribute=format -Wsuggest-attribute=noreturn -Wunused-variable -Wmisleading-indentation -Wundef  -fPIC conftest.c  -L. -L/home/anes/.local/share/mise/installs/ruby/3.3.6/lib -Wl,-rpath,/home/anes/.local/share/mise/installs/ruby/3.3.6/lib -L. -fstack-protector-strong -rdynamic -Wl,-export-dynamic -Wl,--no-as-needed     -Wl,-rpath,/home/anes/.local/share/mise/installs/ruby/3.3.6/lib -L/home/anes/.local/share/mise/installs/ruby/3.3.6/lib -lruby  -lm -lpthread  -lc"
-/usr/bin/ld: /tmp/cciV8ijK.o: in function `t':
+/usr/bin/ld: /tmp/ccjOHBFb.o: in function `t':
 /home/anes/inventory_management2/vendor/bundle/ruby/3.3.0/gems/bigdecimal-3.1.9/ext/bigdecimal/conftest.c:17:(.text+0xb): undefined reference to `__builtin_isfinite'
 collect2: error: ld returned 1 exit status
 checked program was:

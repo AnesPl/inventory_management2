@@ -28,17 +28,17 @@ checking for RB_WARN_CATEGORY_DEPRECATED in ruby.h... yes
 creating Makefile
 
 current directory: /home/anes/inventory_management2/vendor/bundle/ruby/3.3.0/gems/bigdecimal-3.1.9/ext/bigdecimal
-make DESTDIR\= sitearchdir\=./.gem.20250312-55416-ro4ohy sitelibdir\=./.gem.20250312-55416-ro4ohy clean
+make DESTDIR\= sitearchdir\=./.gem.20250318-497983-jh6l7f sitelibdir\=./.gem.20250318-497983-jh6l7f clean
 
 current directory: /home/anes/inventory_management2/vendor/bundle/ruby/3.3.0/gems/bigdecimal-3.1.9/ext/bigdecimal
-make DESTDIR\= sitearchdir\=./.gem.20250312-55416-ro4ohy sitelibdir\=./.gem.20250312-55416-ro4ohy
+make DESTDIR\= sitearchdir\=./.gem.20250318-497983-jh6l7f sitelibdir\=./.gem.20250318-497983-jh6l7f
 compiling bigdecimal.c
 compiling missing.c
 linking shared-object bigdecimal.so
 
 current directory: /home/anes/inventory_management2/vendor/bundle/ruby/3.3.0/gems/bigdecimal-3.1.9/ext/bigdecimal
-make DESTDIR\= sitearchdir\=./.gem.20250312-55416-ro4ohy sitelibdir\=./.gem.20250312-55416-ro4ohy install
-/usr/bin/install -c -m 0755 bigdecimal.so ./.gem.20250312-55416-ro4ohy
+make DESTDIR\= sitearchdir\=./.gem.20250318-497983-jh6l7f sitelibdir\=./.gem.20250318-497983-jh6l7f install
+/usr/bin/install -c -m 0755 bigdecimal.so ./.gem.20250318-497983-jh6l7f
 
 current directory: /home/anes/inventory_management2/vendor/bundle/ruby/3.3.0/gems/bigdecimal-3.1.9/ext/bigdecimal
-make DESTDIR\= sitearchdir\=./.gem.20250312-55416-ro4ohy sitelibdir\=./.gem.20250312-55416-ro4ohy clean
+make DESTDIR\= sitearchdir\=./.gem.20250318-497983-jh6l7f sitelibdir\=./.gem.20250318-497983-jh6l7f clean

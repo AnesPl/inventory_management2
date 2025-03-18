@@ -1,0 +1,26 @@
+<div class="max-w-4xl mx-auto bg-white shadow-md rounded-lg p-6">
+  <h1 class="text-3xl font-bold text-gray-800 mb-4">Create a New Category</h1>
+
+  <%= form_with model: @category, local: true do |form| %>
+    <% if @category.errors.any? %>
+      <div class="errors">
+        <ul>
+          <% @category.errors.full_messages.each do |message| %>
+            <li><%= message %></li>
+          <% end %>
+        </ul>
+      </div>
+    <% end %>
+  
+   <div class="space-y-4">
+      <div class="space-y-2">
+        <%= form.label :name, class: 'block text-sm font-medium text-gray-700' %>
+        <%= form.text_field :name, class: 'mt-1 block w-full p-3 border border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500' %>
+      </div>
+
+    <div>
+        <%= form.submit 'Create Category', class: 'w-full py-3 px-4 bg-blue-500 text-white rounded-md hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-indigo-500' %>
+      </div>
+  <% end %>
+  
+</div>

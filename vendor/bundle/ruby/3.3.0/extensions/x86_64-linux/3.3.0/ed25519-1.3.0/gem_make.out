@@ -3,10 +3,10 @@ current directory: /home/anes/inventory_management2/vendor/bundle/ruby/3.3.0/gem
 creating Makefile
 
 current directory: /home/anes/inventory_management2/vendor/bundle/ruby/3.3.0/gems/ed25519-1.3.0/ext/ed25519_ref10
-make DESTDIR\= sitearchdir\=./.gem.20250312-55416-msqfgl sitelibdir\=./.gem.20250312-55416-msqfgl clean
+make DESTDIR\= sitearchdir\=./.gem.20250318-497983-lo3bhn sitelibdir\=./.gem.20250318-497983-lo3bhn clean
 
 current directory: /home/anes/inventory_management2/vendor/bundle/ruby/3.3.0/gems/ed25519-1.3.0/ext/ed25519_ref10
-make DESTDIR\= sitearchdir\=./.gem.20250312-55416-msqfgl sitelibdir\=./.gem.20250312-55416-msqfgl
+make DESTDIR\= sitearchdir\=./.gem.20250318-497983-lo3bhn sitelibdir\=./.gem.20250318-497983-lo3bhn
 compiling ed25519_ref10.c
 In file included from /home/anes/.local/share/mise/installs/ruby/3.3.6/include/ruby-3.3.0/ruby/ruby.h:15,
                  from /home/anes/.local/share/mise/installs/ruby/3.3.6/include/ruby-3.3.0/ruby.h:38,
@@ -1816,8 +1816,8 @@ compiling verify.c
 linking shared-object ed25519_ref10.so
 
 current directory: /home/anes/inventory_management2/vendor/bundle/ruby/3.3.0/gems/ed25519-1.3.0/ext/ed25519_ref10
-make DESTDIR\= sitearchdir\=./.gem.20250312-55416-msqfgl sitelibdir\=./.gem.20250312-55416-msqfgl install
-/usr/bin/install -c -m 0755 ed25519_ref10.so ./.gem.20250312-55416-msqfgl
+make DESTDIR\= sitearchdir\=./.gem.20250318-497983-lo3bhn sitelibdir\=./.gem.20250318-497983-lo3bhn install
+/usr/bin/install -c -m 0755 ed25519_ref10.so ./.gem.20250318-497983-lo3bhn
 
 current directory: /home/anes/inventory_management2/vendor/bundle/ruby/3.3.0/gems/ed25519-1.3.0/ext/ed25519_ref10
-make DESTDIR\= sitearchdir\=./.gem.20250312-55416-msqfgl sitelibdir\=./.gem.20250312-55416-msqfgl clean
+make DESTDIR\= sitearchdir\=./.gem.20250318-497983-lo3bhn sitelibdir\=./.gem.20250318-497983-lo3bhn clean

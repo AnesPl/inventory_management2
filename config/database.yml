@@ -5,26 +5,12 @@ default: &default
 
 development:
   <<: *default
-  database: db/development.sqlite3  # Database location in development
+  database: db/development.sqlite3
 
 test:
   <<: *default
-  database: db/test.sqlite3  # Database location in test
+  database: db/test.sqlite3
 
 production:
   <<: *default
-  database: db/production.sqlite3  # Persistent SQLite database for production. This will reset every deploy.
-
-  # Optional - for caching, queue, or cable functionality if necessary
-  cache:
-    <<: *default
-    database: db/production_cache.sqlite3
-    migrations_paths: db/cache_migrate
-  queue:
-    <<: *default
-    database: db/production_queue.sqlite3
-    migrations_paths: db/queue_migrate
-  cable:
-    <<: *default
-    database: db/production_cable.sqlite3
-    migrations_paths: db/cable_migrate
+  database: db/production.sqlite3

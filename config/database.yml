@@ -16,3 +16,18 @@ production:
   database: db/production.sqlite3
   pool: 5
   timeout: 5000
+
+cable:
+  adapter: sqlite3
+  database: db/cable_production.sqlite3
+  pool: 5
+  timeout: 5000
+
+queue:
+    adapter: sqlite3
+    database: db/queue.sqlite3
+
+cache:
+  <<: *default
+  database: db/cache.sqlite3
+

@@ -1,2 +1,2 @@
-import Rails from "rails"
+import Rails from "@rails/ujs"
 Rails.start();

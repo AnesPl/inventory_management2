@@ -4,8 +4,8 @@ default: &default
   timeout: 5000
 
 development:
-  <<: *default
-  database: db/development.sqlite3
+  adapter: async
+  # You can remove the Redis-specific settings here as you're using async now.
 
 test:
   <<: *default
@@ -14,3 +14,4 @@ test:
 production:
   <<: *default
   database: db/production.sqlite3
+ 

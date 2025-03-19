@@ -1,18 +1,30 @@
 default: &default
-  adapter: <%= ENV['DB_ADAPTER'] || 'sqlite3' %>
+  adapter: sqlite3
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
   timeout: 5000
 
 development:
   <<: *default
-  database: storage/development.sqlite3
+  database: db/development.sqlite3  # Database location in development
 
 test:
   <<: *default
-  database: storage/test.sqlite3
+  database: db/test.sqlite3  # Database location in test
 
 production:
   <<: *default
-  adapter: postgresql
-  url: <%= ENV['postgres://username:password@hostname:5432/database_name'] %>
-  pool: 5
+  database: db/production.sqlite3  # Persistent SQLite database for production. This will reset every deploy.
+
+  # Optional - for caching, queue, or cable functionality if necessary
+  cache:
+    <<: *default
+    database: db/production_cache.sqlite3
+    migrations_paths: db/cache_migrate
+  queue:
+    <<: *default
+    database: db/production_queue.sqlite3
+    migrations_paths: db/queue_migrate
+  cable:
+    <<: *default
+    database: db/production_cable.sqlite3
+    migrations_paths: db/cable_migrate

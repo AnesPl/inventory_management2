@@ -15,6 +15,7 @@ Rails.application.routes.draw do
   root "products#index"
 
   # Resourceful Routes for Categories and Products
+  resources :users
   resources :categories
   resources :products do
     resources :stock_transactions, only: [:index, :new, :create]

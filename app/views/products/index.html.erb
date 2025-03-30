@@ -2,30 +2,32 @@
 <%= link_to 'New Product', new_product_path, class: 'px-4 py-2 bg-blue-500 text-white rounded-md hover:bg-blue-600 mb-4 inline-block' %>
 
 <div class="bg-white shadow-lg rounded-lg p-6">
-  <table class="min-w-full table-auto">
-    <thead>
-      <tr class="bg-gray-100">
-        <th class="px-6 py-3 text-left text-gray-700">Name</th>
-        <th class="px-6 py-3 text-left text-gray-700">Price</th>
-        <th class="px-6 py-3 text-left text-gray-700">Stock</th>
-        <th class="px-6 py-3 text-left text-gray-700">Category</th>
-        <th class="px-6 py-3 text-left text-gray-700">Actions</th>
-      </tr>
-    </thead>
-    <tbody>
-      <% @products.each do |product| %>
-        <tr class="border-b hover:bg-gray-50">
-          <td class="px-6 py-3"><%= product.name %></td>
-          <td class="px-6 py-3"><%= number_to_currency(product.price) %></td>
-          <td class="px-6 py-3"><%= product.stock %></td>
-          <td class="px-6 py-3"><%= product.category.name if product.category %></td>
-          <td class="px-6 py-3">
-            <%= link_to 'Show', product_path(product), class: 'text-blue-500 hover:text-blue-700' %> |
-            <%= link_to 'Edit', edit_product_path(product), class: 'text-blue-500 hover:text-blue-700' %> |
-            <%= button_to 'Delete', product_path(product), method: :delete, data: { confirm: 'Are you sure?' }, class: 'text-red-500 hover:text-red-700 bg-transparent border-0 cursor-pointer' %>
-          </td>
+  <div class="overflow-x-auto">
+    <table class="min-w-full table-auto">
+      <thead>
+        <tr class="bg-gray-100">
+          <th class="px-6 py-3 text-left text-gray-700 text-sm sm:text-base">Name</th>
+          <th class="px-6 py-3 text-left text-gray-700 text-sm sm:text-base">Price</th>
+          <th class="px-6 py-3 text-left text-gray-700 text-sm sm:text-base">Stock</th>
+          <th class="px-6 py-3 text-left text-gray-700 text-sm sm:text-base">Category</th>
+          <th class="px-6 py-3 text-left text-gray-700 text-sm sm:text-base">Actions</th>
         </tr>
-      <% end %>
-    </tbody>
-  </table>
+      </thead>
+      <tbody>
+        <% @products.each do |product| %>
+          <tr class="border-b hover:bg-gray-50">
+            <td class="px-6 py-3 text-sm sm:text-base"><%= product.name %></td>
+            <td class="px-6 py-3 text-sm sm:text-base"><%= number_to_currency(product.price) %></td>
+            <td class="px-6 py-3 text-sm sm:text-base"><%= product.stock %></td>
+            <td class="px-6 py-3 text-sm sm:text-base"><%= product.category.name if product.category %></td>
+            <td class="px-6 py-3 text-sm sm:text-base">
+              <%= link_to 'Show', product_path(product), class: 'text-blue-500 hover:text-blue-700' %> |
+              <%= link_to 'Edit', edit_product_path(product), class: 'text-blue-500 hover:text-blue-700' %> |
+              <%= button_to 'Delete', product_path(product), method: :delete, data: { confirm: 'Are you sure?' }, class: 'text-red-500 hover:text-red-700 bg-transparent border-0 cursor-pointer' %>
+            </td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+  </div>
 </div>

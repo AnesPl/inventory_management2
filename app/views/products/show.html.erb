@@ -5,6 +5,15 @@
     <p><strong class="font-semibold">Price:</strong> <%= number_to_currency(@product.price) %></p>
     <p><strong class="font-semibold">Stock:</strong> <%= @product.stock %></p>
     <p><strong class="font-semibold">Category:</strong> <%= @product.category.name if @product.category %></p>
+    
+    <div class="mt-4">
+      <strong>Image:</strong><br>
+      <% if @product.image.attached? %>
+        <%= image_tag @product.image, width: 300, alt: @product.name, class: 'rounded-md shadow-md' %>
+      <% else %>
+        <p>No image uploaded</p>
+      <% end %>
+    </div>
   </div>
 
   <div>

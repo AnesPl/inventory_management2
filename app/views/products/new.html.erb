@@ -1,7 +1,7 @@
 <h1 class="text-3xl font-bold text-gray-800 mb-6">Create New Product</h1>
 
 <div class="bg-white shadow-lg rounded-lg p-6">
-  <%= form_with model: @product, local: true do |form| %>
+  <%= form_with model: @product, local: true, html: { multipart: true } do |form| %>
     
     <% if @product.errors.any? %>
       <div class="bg-red-100 text-red-700 p-4 rounded-md mb-4">
@@ -31,10 +31,14 @@
       </div>
 
       <div class="space-y-2">
-      <%= form.label :category_id, class: 'block text-sm font-medium text-gray-700' %>
-      <%= form.collection_select :category_id, current_user.categories, :id, :name, { prompt: 'Select a Category' }, class: 'mt-1 block w-full p-3 border border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500' %>
-    </div>
+        <%= form.label :category_id, class: 'block text-sm font-medium text-gray-700' %>
+        <%= form.collection_select :category_id, current_user.categories, :id, :name, { prompt: 'Select a Category' }, class: 'mt-1 block w-full p-3 border border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500' %>
+      </div>
     
+      <div class="field">
+        <%= form.label :image, class: 'block text-sm font-medium text-gray-700' %>
+        <%= form.file_field :image, class: 'mt-1 block w-full p-3 border border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500' %>
+      </div>
 
       <div>
         <%= form.submit 'Create Product', class: 'w-full py-3 px-4 bg-blue-500 text-white rounded-md hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-indigo-500' %>
